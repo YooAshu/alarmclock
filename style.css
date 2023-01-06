@@ -1,0 +1,475 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e0e0e0;
+}
+.body-dark{
+  background-color: #212121;
+}
+.container{
+  width: 30vw;
+    height: 80vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  background: #e0e0e0;
+box-shadow:  16px 16px 18px #989898,
+             -16px -16px 18px #ffffff;
+
+  border-radius: 3%;
+}
+.container.container-dark{
+  background: #212121;
+    box-shadow: 16px 16px 18px #1c1c1c, -16px -16px 18px #262626;
+}
+.circle{
+       width: 20vw;
+    height: 20vw;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  17px 17px 30px #949494,
+             -17px -17px 30px #ffffff;
+}
+.circle.circle-dark{
+  background: linear-gradient(145deg, #333333, #2b2b2b);
+box-shadow:  17px 17px 30px #141414,
+             -17px -17px 30px #242424;
+  color: #605f5f;
+}
+
+.time{
+      width: 40%;
+    height:13%;
+    background-color:#e0e0e0;
+     display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+    position: absolute;
+    top: 10%;
+  font-size: 45px;
+  box-shadow: inset 14px 14px 15px #8d8d8d,
+            inset -14px -14px 15px #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+ 
+}
+.time.time-dark{
+  color: #605f5f;
+  background-color: #222222;
+  box-shadow: inset 14px 14px 15px #141414,
+            inset -14px -14px 15px #262626;
+}
+.digit{
+  
+    height: 50%;
+    position: absolute;
+    left: 42%;
+    top: 0;
+    transform: rotate(calc(30deg* var(--i)));
+    padding: 6px;
+    text-align: center;
+    /* display: inline; */
+    transform-origin: bottom;
+  
+}
+/* .digit::after{
+
+    content: "";
+    height: 75%;
+    
+    position: absolute;
+    top: 25%;
+    left: 50%;
+}
+.digit:hover::after{
+  border: 1px solid;
+} */
+
+.digit p{
+  transform: rotate(calc(-30deg* var(--i)));
+  font-size:30px;
+  text-align: center;
+/*   border : 1px solid black; */
+  display : inline-block;
+  width : 34px;
+  height: 34px;
+  border-radius : 100px;
+}
+.digit2{
+ /* border: 1px solid black; */
+    /* width: 15px; */
+    height: 35%;
+    position: absolute;
+    left: 45%;
+    top: 16%;
+    transform: rotate(calc(30deg* var(--i)));
+    /* padding: 6px; */
+    /* text-align: end; */
+    transform-origin: bottom;
+}
+/* .digit2::after{
+  border: 1px solid; 
+    content: "";
+    height: 75%;
+    
+    position: absolute;
+    top: 25%;
+    left: 50%;
+}
+.digit2:hover::after{
+  border: 1px solid ;
+} */
+.digit2 p{
+  transform: rotate(calc(-30deg* var(--i)));
+  font-size:20px;
+  text-align: center;
+/*    border : 1px solid black; */
+  display : inline-block;
+  width : 26px;
+  height: 26px;
+  border-radius : 100px;
+}
+.t1 ,.t2{
+  display: inline-block;
+  height: 90%;
+  width: 45%;
+  
+  
+  padding: 17px ;  
+}
+.t1{
+  padding-right: 0px;
+  text-align: end;
+  
+}
+.t2{
+  padding-left: 0px;
+  text-align: start;
+  
+}
+.set  {
+    position: absolute;
+    top: 10px;
+    font-size: 30px;
+    left: 30px;
+ 
+}
+.check{
+       position: absolute;
+    top: 10px;
+    font-size: 30px;
+    right: 30px;
+    
+    width: 40px;
+    text-align: center;
+    border-radius: 100%;
+}
+.check:hover{
+  background-color: black;
+  color: #e0e0e0;
+}
+.setalarm{
+  width: 80%;
+  border-bottom: 2px solid #605f5f;;
+  height: 53px;
+   color: #605f5f;
+  cursor: pointer;
+}
+.digit p:hover , .digit2 p:hover{
+/*   border: 1px solid; */
+  cursor: pointer;
+  background-color: black;
+  color: #e0e0e0;
+}
+.digit3{
+     height: 48%;
+    position: absolute;
+    left: 45%;
+    top: 2%;
+    transform: rotate(calc(6deg* var(--i)));
+/*     padding: 6px; */
+    text-align: center;
+    /* display: inline; */
+    transform-origin: bottom;
+  
+  
+}
+.digit3 p{
+  transform: rotate(calc(-6deg* var(--i)));
+  font-size:30px;
+  text-align: center;
+/*    border : 1px solid black; */
+  display : inline-block;
+  width : 34px;
+  height: 34px;
+  border-radius : 100px;
+  cursor: pointer;
+}
+.digit3 p:hover{
+  
+  background-color: black;
+  color: #e0e0e0;
+}
+.digit4{
+    height: 48%;
+    position: absolute;
+    left: 45%;
+    top: 2%;
+    transform: rotate(calc( 15deg + 6deg* var(--i)));
+/*     padding: 6px; */
+    text-align: center;
+    /* display: inline; */
+    transform-origin: bottom;
+  
+  
+}
+.digit4 p{
+/*   transform: rotate(calc( -13deg - 6deg* var(--i))); */
+  font-size:25px;
+  text-align: center;
+/*    border : 1px solid black; */
+  display : inline-block;
+  width : 34px;
+  height: 34px;
+  border-radius : 100px;
+  cursor: pointer;
+}
+.digit4 p span{
+  display: inline-block;
+}
+.pointminute:hover{
+  -webkit-text-stroke: 5px black;
+  text-stroke: 5px black;
+}
+.currenttime{
+  width: 35%;
+    height: 6%;
+   
+    position: absolute;
+    left: 32%;
+    top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  background: #e0e0e0;
+box-shadow:  16px 16px 18px #989898,
+             -16px -16px 18px #ffffff;
+  border-radius: 10px;
+}
+.currenttime.ctime-dark{
+  background: #212121;
+    box-shadow: 16px 16px 18px #1c1c1c, -16px -16px 18px #262626;
+  color: #e0e0e0;
+}
+.status{
+  width: 70%;
+  height: 15%;
+/*   background-color: red; */
+  position: absolute;
+  bottom: 3%;
+  
+}
+.status.status-dark{
+  color: #605f5f;
+}
+.s2{
+      width: 100%;
+    text-align: center;
+    height: 60%;
+    font-size: 2rem;
+}
+.s1{
+      width: 100%;
+    text-align: center;
+    height: 40%;
+    font-size: 2rem;
+}
+.day-night{
+  
+        position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 41px;
+    width: 90px;
+ background: #e0e0e0;
+box-shadow: -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6,
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+    border-radius: 50px;
+  color: #605f5f;
+  cursor: pointer;
+}
+.day-night.daynight-dark{
+  background: #212121;
+    box-shadow: 16px 16px 18px #1c1c1c, -16px -16px 18px #262626;
+}
+.indicator{
+       position: absolute;
+    height: 100%;
+    width: 43px;
+    background-color: #ecf0f3;
+    border-radius: 50px;
+    transform: scale(.8);
+  text-align: center;
+   left: 0px;
+   transition: ease-in .4s;
+   z-index :2;
+   
+   
+    padding: 5px;
+}
+
+.indicator.night{
+   transition: ease-in .4s;
+ left: 45px;
+}
+.dark{
+  position: absolute;
+    right: 0;
+    text-align: center;
+    padding: 5px;
+}
+.light{
+  position: absolute;
+    left: 0;
+    text-align: center;
+    padding: 5px;
+}
+.lmode{
+  position: absolute;
+  left: 6px;
+  opacity: 1;
+  transition: ease-in .4s;
+}
+.dmode{
+  position: absolute;
+  left: 6px;
+  opacity: 0;
+  transition: ease-in .4s;
+}
+.lmode.lmode-dark{opacity: 0;}
+.dmode.dmode-dark{opacity: 1;}
+
+.material-symbols-outlined{font-size: 30px !important;}
+@media all and (max-width:450px){
+  .container{
+    width: 85vw;
+    height: 75vh;
+  }
+  .circle{
+    width: 70vw;
+    height: 70vw;
+  }
+  .currenttime{
+    width: 40%;
+  }
+  .time{
+    width: 45%;
+    top: 12%;
+    
+  }
+  .s1{
+    font-size :25px;
+  }
+}
+@media all and (min-width:451px) and (max-width:650px){
+  .container{
+    width: 85vw;
+    height: 75vh;
+    
+  }
+  .circle{
+    width: 70vw;
+    height: 70vw;
+  }
+  .currenttime{
+    width: 40%;
+  }
+  .time{
+    width: 45%;
+    top: 12%;
+    
+  }
+  .s1{
+    font-size :25px;
+  }
+  .digit2 p {
+    font-size:25px ;
+  }
+  .digit p {
+    font-size:35px ;
+    width: 40px;
+    height: 40px;
+  }
+  .digit3 p {
+    font-size:35px ;
+    width: 40px;
+    height: 40px;
+  }
+  .digit{left: 44%;}
+  .digit2{left: 47%;}
+  .digit3{left:46%}
+}
+@media all and (min-width:651px) and (max-width:950px){
+  .container{
+    width: 75vw;
+    height: 80vh;
+    
+  }
+  .circle{
+    width: 60vw;
+    height: 60vw;
+  }
+  .currenttime{
+    width: 40%;
+    top: -9%;
+    font-size: 2rem;
+  }
+  .time{
+    width: 45%;
+    top: 12%;
+    font-size: 4rem;
+  }
+  
+  .digit2 p {
+    font-size:35px ;
+  }
+  .digit p {
+    font-size:45px ;
+    width: 50px;
+    height: 50px;
+  }
+  .digit3 p {
+    font-size:45px ;
+    width: 50px;
+    height: 50px;
+  }
+  .digit4 p{font-size: 33px;}
+  
+  .digit{left: 44%;}
+  .digit2{left: 47%;}
+  .digit3{left:46%}
+  .digit4{left: 47%;}
+  .status{
+    bottom: 0%;
+    
+  }
+  .s1 , .s2{font-size: 3rem;}
+}
